@@ -1,0 +1,1 @@
+![Диаграмма](diagram_task_3.png)
