@@ -1,0 +1,121 @@
+{
+  "info": {
+    "_postman_id": "93a40a4b-a6b6-4b08-89e4-3e9229d4caa8",
+    "name": "QA7",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40175705"
+  },
+  "item": [
+    {
+      "name": "Get entities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities",
+          "host": ["{{baseURL}}"],
+          "path": ["sim", "entities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get a single entity",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities/1",
+          "host": ["{{baseURL}}"],
+          "path": ["sim", "entities", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get an entity that does not exist",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities/13",
+          "host": ["{{baseURL}}"],
+          "path": ["sim", "entities", "13"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create an entity",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities?name=bob",
+          "host": ["{{baseURL}}"],
+          "path": ["sim", "entities"],
+          "query": [
+            {
+              "key": "name",
+              "value": "bob"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Amend an Entity",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities/10?name=eris",
+          "protocol": "https",
+          "host": ["apichallenges", "eviltester", "com"],
+          "path": ["sim", "entities", "10"],
+          "query": [
+            {
+              "key": "name",
+              "value": "eris"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete an entity",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities/9",
+          "host": ["{{baseURL}}"],
+          "path": ["sim", "entities", "9"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get deleted entity",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/sim/entities/9",
+          "host": ["{{baseURL}}"],
+          "path": ["sim", "entities", "9"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "https://apichallenges.eviltester.com",
+      "type": "default"
+    }
+  ]
+}
